@@ -2,6 +2,15 @@
 
 > Proyecto de maquetación web para una tienda temática de Jurassic Park, desarrollado como parte del curso "Desarrollo de Aplicaciones Front-End Trainee V2.0" (Sence).
 
+Proyecto:
+
+https://github.com/enepixeles/ecommerce-jp.git
+
+URL:
+https://enepixeles.github.io/ecommerce-jp/
+
+
+
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
