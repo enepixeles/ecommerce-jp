@@ -1,0 +1,239 @@
+/* --- 1. IMPORTACIÓN DE FUENTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;700&display=swap');
+
+/* --- 2. VARIABLES DE COLORES --- */
+:root {
+    --jp-green-dark: #1b2618;
+    --jp-green-light: #2c4c3b;
+    --jp-princ: #000;
+    --jp-red: #b90e0a;
+    --text-color: #333;
+    --bg-light: #f4f4f4;
+}
+
+/* --- 3. CONFIGURACIÓN GENERAL --- */
+body {
+    background-color: var(--bg-light);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+/* --- 4. NAVBAR --- */
+.custom-nav {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    color: var(--jp-green-dark) !important;
+}
+
+/* --- 5. HERO SECTION --- */
+.hero--jurassic {
+    background-image: url('../assets/banner-back.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 85vh;       
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden; 
+    position: relative;
+}
+
+.hero__title {
+    font-family: 'Anton', sans-serif;
+    font-size: 4.5rem;
+    line-height: 0.95;
+    color: var(--jp-princ);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero__badge {
+    font-family: 'Inter', sans-serif;
+    color: var(--jp-princ);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: var(--jp-green-dark);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero__img {
+    max-height: 85vh; 
+    width: auto;
+    filter: none; 
+    transition: transform 0.5s ease;
+}
+
+.hero__img:hover {
+    transform: scale(1.03) rotate(2deg); 
+}
+
+.hero__btn {
+    background-color: var(--jp-red);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    padding: 12px 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.hero__btn:hover {
+    background-color: var(--jp-princ);
+    color: #fff;
+    border-color: #000;
+}
+
+/* --- 6. PRODUCTOS --- */
+
+.products-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #e0e0e0; 
+    border-radius: 4px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--jp-green-dark);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-card__title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #000;
+    line-height: 1.2;
+}
+
+.product-card__price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--jp-red);
+    font-family: 'Inter', sans-serif;
+}
+
+
+.btn-dark {
+    background-color: var(--jp-green-dark);
+    border: none;
+    transition: background 0.3s;
+}
+
+.btn-dark:hover {
+    background-color: var(--jp-red);
+}
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .hero__title { font-size: 3rem; }
+    .hero--jurassic { height: auto; padding: 50px 0; text-align: center; }
+    .hero__img { max-height: 300px; }
+}
+
+
+
+/* --- ESTILOS FICHA DE PRODUCTO --- */
+
+.main-image-container {
+    background-color: #f6f6f6;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.thumbnail-box {
+    background-color: #f6f6f6;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.thumbnail-box:hover {
+    border-color: #000 !important;
+}
+
+.product-title {
+    font-family: 'Anton', sans-serif; 
+    letter-spacing: 1px;
+}
+
+.product-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    color: var(--jp-princ); /* Negro */
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.color-option.selected::after {
+    content: '';
+    position: absolute;
+    top: -4px; right: -4px; bottom: -4px; left: -4px;
+    border: 1px solid #000;
+    border-radius: 6px;
+}
+
+/* Botón Añadir al Carrito */
+.add-cart-btn {
+    background-color: var(--jp-princ);
+    border: none;
+    transition: transform 0.2s;
+}
+
+.add-cart-btn:hover {
+    background-color: var(--jp-red);
+    transform: scale(1.01);
+}
+
+/* Botones de tallas */
+.btn-outline-dark:hover {
+    background-color: var(--jp-princ);
+}
+
+
+button.thumbnail-box {
+    background: #f6f6f6;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+/* Cuando la miniatura está activa (Bootstrap le agrega la clase .active automáticamente) */
+button.thumbnail-box.active {
+    border-color: #000 !important;
+    background-color: #fff;
+    opacity: 1;
+}
+
+/* Hover */
+button.thumbnail-box:hover {
+    border-color: #ccc;
+}
